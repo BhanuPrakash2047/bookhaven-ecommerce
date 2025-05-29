@@ -7,6 +7,12 @@
 
 ![Screenshot 2025-05-15 213124](https://github.com/user-attachments/assets/ddd7eccc-ebaf-448a-9241-abbdb24fbe1d)
 
+![image](https://github.com/user-attachments/assets/9153d4e5-26c1-48c8-b203-4e959bc328a1)
+
+![Screenshot 2025-05-25 111842](https://github.com/user-attachments/assets/6bb3a51f-313c-4e6d-9d20-64a812681aa2)
+
+
+
 This system follows a **true microservices architecture**, where each service owns its own database and domain logic. Services communicate using **Kafka** for events and **OpenFeign** for direct coordination. WebSocket and Redis caching further enhance performance and user experience.
 
 ---
@@ -76,6 +82,19 @@ While the expected features were:
 > This **fan-out event model** ensures loose coupling, scalability, and performance under load.
 
 ---
+
+
+### 🔮 Future Improvements
+
+If I had more time, I would enhance BookHaven with the following features to further improve scalability, reliability, and user experience:
+
+- **Circuit Breaker Implementation:** To improve fault tolerance and prevent cascading failures between microservices.
+- **Distributed Tracing:** For better observability and debugging across service calls in this distributed architecture.
+- **Expand Notifications Coverage:** Currently, notifications are sent only when an order is created. I plan to implement real-time notifications for all critical events across all services.
+- **Advanced Recommendation Algorithms:** Upgrade the recommendation engine with machine learning or collaborative filtering techniques for more personalized user suggestions.
+- **Docker Build Automation:** Add Dockerfiles and multi-stage builds for each microservice and frontend to simplify deployment and ensure consistent environments.
+
+
 
 ### 🛠️ How to Run Locally
 
