@@ -1,4 +1,4 @@
-# 📚 BookHaven — A Scalable, Voice-Powered Microservices Bookstore
+# 📚 BookHaven — A Scalable, Microservices Bookstore
 
 > 🎯 Solo-built, production-grade e-commerce platform with modern microservices, real-time architecture, and advanced user experience.
 
