@@ -51,16 +51,17 @@ While the expected features were:
 
 📦 backend_microservices/
 - ┣ 📂 ApiGatewayAuth/
--┣ 📂 sp_admin-service/
--┣ 📂 sp_api-gateway/
--┣ 📂 sp_notification-service/
--┣ 📂 sp_order-payment-service/
--┣ 📂 sp_product-service/
--┣ 📂 sp_recommendation-service/
--┣ 📂 sp_serviceregistry/
+- ┣ 📂 sp_admin-service/
+- ┣ 📂 sp_api-gateway/
+- ┣ 📂 sp_notification-service/
+- ┣ 📂 sp_order-payment-service/
+- ┣ 📂 sp_product-service/
+- ┣ 📂 sp_recommendation-service/
+- ┣ 📂 sp_serviceregistry/
+
 📦 frontend/sp-frontend/
--┣ 📂 src/
--┣ 📄 README.md, vite.config.js, tailwind.config.js ...
+- ┣ 📂 src/
+- ┣ 📄 README.md, vite.config.js, tailwind.config.js ...
 
 
 ---
