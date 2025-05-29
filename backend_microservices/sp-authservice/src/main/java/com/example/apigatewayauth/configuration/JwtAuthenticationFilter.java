@@ -1,4 +1,4 @@
-package com.example.apigatewayauth.configurations;
+package com.example.apigatewayauth.configuration;
 
 import com.example.apigatewayauth.services.JwtService;
 import com.example.apigatewayauth.services.MyUserDetailsService;
@@ -75,7 +75,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         }
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         String requestURI = httpRequest.getRequestURI();
-        System.out.println("-------------++++++++++++>Given HttpServletRequest: " + requestURI);
+      
 
         // Write the response indicating the authentication status and user roles
         if (requestURI.contains("/admin/get_users")) {

@@ -1,4 +1,4 @@
-package com.example.apigatewayauth.configurations;
+package com.example.apigatewayauth.configuration;
 
 //import com.example.apigatewayauth.services.MyUserDetailService;
 import com.example.apigatewayauth.services.MyUserDetailsService;

@@ -1,7 +1,7 @@
 package com.example.apigatewayauth.services;
 
 
-import com.example.apigatewayauth.Repo.PersonDetailsRepo;
+import com.example.apigatewayauth.repository.PersonDetailsRepo;
 
 import com.example.apigatewayauth.modal.PersonDetails;
 import org.springframework.beans.factory.annotation.Autowired;

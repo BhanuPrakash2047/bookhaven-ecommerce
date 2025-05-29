@@ -1,7 +1,7 @@
-package com.example.apigatewayauth.controllers;
+package com.example.apigatewayauth.controller;
 
 import com.example.apigatewayauth.LoginForm;
-import com.example.apigatewayauth.Repo.PersonDetailsRepo;
+import com.example.apigatewayauth.repository.PersonDetailsRepo;
 
 import com.example.apigatewayauth.modal.PersonDetails;
 import com.example.apigatewayauth.modal.TokenResponseDto;
@@ -59,9 +59,7 @@ public class ContentController {
 
     @PostMapping("/login")
     public ResponseEntity<TokenResponseDto> authenticateAndGetToken(@RequestBody LoginForm loginForm) {
-        // Authenticate user credentials
-        System.out.println("Username will be Printed-->  "+loginForm.username());
-        System.out.println("Password Will Be Printed-->  "+loginForm.password());
+
         try {
             Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(loginForm.username(), loginForm.password())
@@ -87,7 +85,7 @@ public class ContentController {
             String name=jwtService.extractName(token);
             // Create the response object with token and roles
             TokenResponseDto response = new TokenResponseDto(token, roles,userName,name,email);
-            System.out.println("This is the response"+response.toString());
+          
 
             // Return response as JSON
             return ResponseEntity.ok(response);

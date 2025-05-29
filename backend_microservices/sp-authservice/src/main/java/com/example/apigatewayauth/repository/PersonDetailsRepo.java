@@ -1,4 +1,4 @@
-package com.example.apigatewayauth.Repo;
+package com.example.apigatewayauth.repository;
 
 import com.example.apigatewayauth.modal.PersonDetails;
 import jakarta.transaction.Transactional;
