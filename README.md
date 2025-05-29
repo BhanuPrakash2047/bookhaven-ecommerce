@@ -24,7 +24,7 @@ While the expected features were:
 | Feature | Description |
 |--------|-------------|
 | 🔁 **Recommendation Engine** | Based on user orders (genres, authors, publishers) using Kafka |
-| 🔔 **Real-Time Notifications** | Kafka + WebSockets used for instant updates (e.g., order status) |
+| 🔔 **Real-Time Notifications** | Kafka + WebSockets used for instant updates (e.g., order created) |
 | 📊 **Admin Order Control** | Admin can view, track, and update order statuses |
 | 🔐 **Rate Limiting (Bucket4j + Redis)** | Protects API from abuse, production-safe |
 | 📦 **Microservices with Kafka Events** | All services independently deployable |
@@ -37,7 +37,7 @@ While the expected features were:
 
 | Layer | Technologies |
 |-------|--------------|
-| **Frontend** | React, Tailwind CSS, ShadCN, Redux, Framer Motion |
+| **Frontend** | React, Tailwind CSS, Redux, Framer Motion |
 | **Backend** | Spring Boot Microservices, Spring Security, OpenFeign |
 | **Messaging** | Apache Kafka, WebSockets |
 | **Caching/Rate Limiting** | Redis, Bucket4j |
@@ -50,17 +50,17 @@ While the expected features were:
 
 
 📦 backend_microservices/
-┣ 📂 ApiGatewayAuth/
-┣ 📂 sp_admin-service/
-┣ 📂 sp_api-gateway/
-┣ 📂 sp_notification-service/
-┣ 📂 sp_order-payment-service/
-┣ 📂 sp_product-service/
-┣ 📂 sp_recommendation-service/
-┣ 📂 sp_serviceregistry/
+-┣ 📂 ApiGatewayAuth/
+-┣ 📂 sp_admin-service/
+-┣ 📂 sp_api-gateway/
+-┣ 📂 sp_notification-service/
+-┣ 📂 sp_order-payment-service/
+-┣ 📂 sp_product-service/
+-┣ 📂 sp_recommendation-service/
+-┣ 📂 sp_serviceregistry/
 📦 frontend/sp-frontend/
-┣ 📂 src/
-┣ 📄 README.md, vite.config.js, tailwind.config.js ...
+-┣ 📂 src/
+-┣ 📄 README.md, vite.config.js, tailwind.config.js ...
 
 
 ---
