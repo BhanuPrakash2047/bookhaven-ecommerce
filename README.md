@@ -29,13 +29,13 @@ While the expected features were:
 
 | Feature | Description |
 |--------|-------------|
-| 🔁 **Recommendation Engine** | Based on user orders (genres, authors, publishers) using Kafka |
+| 🔁 **Recommendation Engine** | Based on user orders (genres, authors, publishers) over time using Kafka |
 | 🔔 **Real-Time Notifications** | Kafka + WebSockets used for instant updates (e.g., order created) |
-| 📊 **Admin Order Control** | Admin can view, track, and update order statuses |
-| 🔐 **Rate Limiting (Bucket4j + Redis)** | Protects API from abuse, production-safe |
+| 📊 **Admin Order Control** | Admin can view, and update order statuses |
+| 🔐 **Rate Limiting (Redis with Gateway)** | Protects API from abuse, production-safe |
 | 📦 **Microservices with Kafka Events** | All services independently deployable |
 | 🎙️ **Voice Search** | Integrated using Web Speech API |
-| ⚡ **Redis Caching** | Fast access to popular books, cart, and wishlist |
+| ⚡ **Redis Caching** | Fast access to popular books service(need to be implemnted to all services) |
 
 ---
 
@@ -56,7 +56,7 @@ While the expected features were:
 
 
 📦 backend_microservices/
-- ┣ 📂 ApiGatewayAuth/
+- ┣ 📂 sp-authservice/
 - ┣ 📂 sp_admin-service/
 - ┣ 📂 sp_api-gateway/
 - ┣ 📂 sp_notification-service/
