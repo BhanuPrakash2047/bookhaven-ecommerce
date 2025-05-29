@@ -1,6 +1,6 @@
 # 📚 BookHaven — A Scalable, Microservices Bookstore
 
-> 🎯 Solo-built, production-grade e-commerce platform with modern microservices, real-time architecture, and advanced user experience.
+> 🎯 A production-grade e-commerce platform with modern microservices, real-time architecture, and advanced user experience.
 
 ---
 ### 🖼️ Architecture Overview
