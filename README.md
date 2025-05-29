@@ -50,7 +50,7 @@ While the expected features were:
 
 
 📦 backend_microservices/
--┣ 📂 ApiGatewayAuth/
+- ┣ 📂 ApiGatewayAuth/
 -┣ 📂 sp_admin-service/
 -┣ 📂 sp_api-gateway/
 -┣ 📂 sp_notification-service/
