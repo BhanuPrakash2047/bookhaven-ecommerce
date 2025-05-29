@@ -1,0 +1,39 @@
+spring:
+  cloud:
+    gateway:
+      default-filters: [ ]
+      routes:
+        - id: auth-service
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/auth/**
+        - id: register-rout
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/register/**
+        - id: books-route
+          uri: lb://SP-PRODUCT-SERVICE
+          predicates:
+            - Path=/api/admin/**,/api/cart/**,/api/cart,/api/wishlist/**,/api/wishlist,/api/rating/**,/api/checkout/**,/api/checkout,/api/addresses/**,/api/addresses
+          filters:
+            - JwtAuthenticationFilter
+
+        - id: orders-route
+          uri: lb://SP-ORDER-PAYMENT-SERVICE
+          predicates:
+            - Path=/api/orders/**,/api/orders,/api/order/statistics
+          filters:
+            - JwtAuthenticationFilter
+        - id: notification-route
+          uri: lb://SP-NOTIFICATION-SERVICE
+          predicates:
+            - Path=/api/notifications,/api/notifications/**
+          filters:
+            - JwtAuthenticationFilter
+        - id: recommendation-route
+          uri: lb://SP-RECOMMENDATION-SERVICE
+          predicates:
+            - Path=/api/recommendations,/api/recommendations/**
+          filters:
+            - JwtAuthenticationFilter
+
