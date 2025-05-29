@@ -1,16 +1,28 @@
 spring:
+  data:
+   redis:
+    host: localhost
+    port: 6379
   cloud:
     gateway:
-      default-filters: [ ]
+      default-filters:
+        - name: RequestRateLimiter
+          args:
+            redis-rate-limiter.replenish-rate: 10
+            redis-rate-limiter.burst-capacity: 20
+            redis-rate-limiter.requested-tokens: 20
+            key-resolver: "#{@ipKeyResolver}"
       routes:
         - id: auth-service
           uri: lb://AUTH-SERVICE
           predicates:
             - Path=/auth/**
+
         - id: register-rout
           uri: lb://AUTH-SERVICE
           predicates:
             - Path=/register/**
+
         - id: books-route
           uri: lb://SP-PRODUCT-SERVICE
           predicates:
@@ -24,12 +36,14 @@ spring:
             - Path=/api/orders/**,/api/orders,/api/order/statistics
           filters:
             - JwtAuthenticationFilter
+
         - id: notification-route
           uri: lb://SP-NOTIFICATION-SERVICE
           predicates:
             - Path=/api/notifications,/api/notifications/**
           filters:
             - JwtAuthenticationFilter
+
         - id: recommendation-route
           uri: lb://SP-RECOMMENDATION-SERVICE
           predicates:
