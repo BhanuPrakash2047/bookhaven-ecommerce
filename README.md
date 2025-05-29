@@ -24,6 +24,7 @@ While the expected features were:
 - Product listing, filtering, cart/wishlist
 - Image gallery, checkout, login/signup
 - Admin CRUD, responsive design, light/dark mode
+- Lazy loading and skeleton loaders
 
 **BookHaven exceeded them with:**
 
