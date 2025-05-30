@@ -7,9 +7,19 @@
 
 ![Screenshot 2025-05-15 213124](https://github.com/user-attachments/assets/ddd7eccc-ebaf-448a-9241-abbdb24fbe1d)
 
+![image](https://github.com/user-attachments/assets/0730eb96-185c-4775-a976-86d2323b3eb4) 
+
+
 ![image](https://github.com/user-attachments/assets/9153d4e5-26c1-48c8-b203-4e959bc328a1)
 
-![Screenshot 2025-05-25 111842](https://github.com/user-attachments/assets/6bb3a51f-313c-4e6d-9d20-64a812681aa2)
+![Screenshot 2025-05-30 104107](https://github.com/user-attachments/assets/f3a834a1-27c5-47e5-a9dd-63fba801dc50)
+
+![image](https://github.com/user-attachments/assets/7bd8639b-cfcf-4e49-a156-1198d658d30b)
+
+![Screenshot 2025-05-30 013413](https://github.com/user-attachments/assets/cc9f5423-1867-472d-b609-1887fafffe5f)
+
+
+
 
 
 
@@ -24,18 +34,19 @@ While the expected features were:
 - Product listing, filtering, cart/wishlist
 - Image gallery, checkout, login/signup
 - Admin CRUD, responsive design, light/dark mode
+- Lazy loading and skeleton loaders
 
 **BookHaven exceeded them with:**
 
 | Feature | Description |
 |--------|-------------|
-| 🔁 **Recommendation Engine** | Based on user orders (genres, authors, publishers) using Kafka |
+| 🔁 **Recommendation Engine** | Based on user orders (genres, authors, publishers) over time using Kafka |
 | 🔔 **Real-Time Notifications** | Kafka + WebSockets used for instant updates (e.g., order created) |
-| 📊 **Admin Order Control** | Admin can view, track, and update order statuses |
-| 🔐 **Rate Limiting (Bucket4j + Redis)** | Protects API from abuse, production-safe |
+| 📊 **Admin Order Control** | Admin can view, and update order statuses |
+| 🔐 **Rate Limiting (Redis with Gateway)** | Protects API from abuse, production-safe |
 | 📦 **Microservices with Kafka Events** | All services independently deployable |
 | 🎙️ **Voice Search** | Integrated using Web Speech API |
-| ⚡ **Redis Caching** | Fast access to popular books, cart, and wishlist |
+| ⚡ **Redis Caching** | Fast access to popular books service(need to be implemnted to all services) |
 
 ---
 
@@ -56,7 +67,7 @@ While the expected features were:
 
 
 📦 backend_microservices/
-- ┣ 📂 ApiGatewayAuth/
+- ┣ 📂 sp-authservice/
 - ┣ 📂 sp_admin-service/
 - ┣ 📂 sp_api-gateway/
 - ┣ 📂 sp_notification-service/

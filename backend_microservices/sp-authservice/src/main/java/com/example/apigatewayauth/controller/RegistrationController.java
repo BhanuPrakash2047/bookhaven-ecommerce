@@ -21,7 +21,6 @@ public class RegistrationController {
 
     @PostMapping(value = "/register/user" ,consumes = "application/json")
     public ResponseEntity<PersonDetails> createUser(@RequestBody PersonDetails user) {
-        System.out.println("====================================================="+user.getPassword()+"==="+passwordEncoder.encode(user.getPassword()));
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         return new ResponseEntity<>(myUserRepository.save(user), HttpStatus.OK);
     }
