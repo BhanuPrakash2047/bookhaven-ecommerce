@@ -99,11 +99,12 @@ public class OrderController {
     @PutMapping("/{orderId}/status")
     public ResponseEntity<ApiResponse> updateOrderStatus(
             @PathVariable Long orderId,
-            @RequestBody UpdateOrderStatusRequest request
+            @RequestBody UpdateOrderStatusRequest request,
+            @RequestHeader("roles") List<String> roles
 
       ) {
-
-
+        // Check if the user has admin role
+ 
         boolean updated = orderService.updateOrderStatus(orderId, request.getStatus());
         ApiResponse response = new ApiResponse(updated, "Order status updated successfully");
         return new ResponseEntity<>(response, HttpStatus.OK);
